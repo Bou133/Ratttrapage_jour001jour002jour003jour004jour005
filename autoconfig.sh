@@ -58,7 +58,7 @@ timeshift --create
 clear
 echo "configuration terminée"
 sleep 5
-systemctl reboot
+
 apt update
 apt install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -68,3 +68,10 @@ zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 source ~/.zshrc
 p10k configure
+ssh=""
+name=""
+read ssh
+$ssh
+echo "quel est votre nom ?"
+read name
+echo "Bienvenue!!" $name
